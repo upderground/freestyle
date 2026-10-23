@@ -72,15 +72,13 @@ h2 { font-size: 22px; font-weight: 550; line-height: 1.2; letter-spacing: -.03em
 h3 { font-size: 22px; font-weight: 500; line-height: 1.25; letter-spacing: -.025em; margin: 0 0 12px; max-width: 470px; }
 .format p { font-size: 15px; line-height: 1.5; margin: 0 0 12px; }
 .format .format-note { font-size: 14px; color: var(--muted); }
+.review-result strong { font-weight: 550; }
 .format + .format { margin-top: 18px; padding-top: 22px; border-top: 1px solid var(--line); }
 summary { font-size: 13px; line-height: 1.4; color: var(--wine); cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 9px; list-style: none; }
 summary span { text-decoration: underline; text-underline-offset: 4px; }
 summary::before { content: "+"; font-size: 18px; font-weight: 400; width: 12px; flex: 0 0 12px; }
 summary::-webkit-details-marker { display: none; }
 details[open] > summary::before { content: "−"; }
-.duration p { font-size: 14px; margin-top: 5px; }
-.continuation { font-size: 15px; line-height: 1.5; margin: 23px 0 0; }
-.continuation strong { font-weight: 550; }
 .contact { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 290px; align-items: center; column-gap: 40px; background: #f3f0f1; padding: 24px 30px; margin-top: 30px; }
 .contact h2 { margin-bottom: 10px; }
 .contact p { font-size: 14px; line-height: 1.5; margin: 0 0 8px; }
@@ -119,7 +117,6 @@ details[open] > summary::before { content: "−"; }
   .format p { font-size: 15px; }
   .format .format-note { font-size: 14px; }
   .format + .format { margin-top: 14px; padding-top: 22px; }
-  .continuation { margin-top: 20px; }
   .contact { order: 2; display: block; width: calc(100% + 40px); margin: 24px -20px 0; padding: 23px 20px; }
   .contact-action { margin-top: 19px; }
   .contact-action p { max-width: none; }
