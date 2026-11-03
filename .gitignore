@@ -1,1 +1,6 @@
 .DS_Store
+.local-edit-server.pid
+local-edit/
+.preview-worktrees/
+source/performance-master.jpg
+assets/performance.jpg

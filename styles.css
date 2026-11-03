@@ -60,7 +60,8 @@ main.page { display: grid; grid-template-columns: 320px minmax(0, 1fr); column-g
 h1 { font-family: Unbounded, "Golos Text", sans-serif; font-weight: 450; font-size: 24px; line-height: 1.28; letter-spacing: -.045em; margin: 0; }
 .offer { font-size: 14px; line-height: 1.5; margin: 19px 0 0; }
 .stage-photo { width: 260px; margin: -35px 0 0 30px; position: relative; }
-.stage-photo img { width: 260px; aspect-ratio: 2560 / 1707; object-fit: contain; }
+.stage-photo picture { display: block; width: 260px; max-width: 100%; }
+.stage-photo img { width: 100%; aspect-ratio: 2560 / 1707; object-fit: contain; }
 .stage-photo figcaption { font-size: 11px; line-height: 1.5; margin-top: 8px; color: var(--muted); }
 .stage-photo figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .stage-photo figcaption a:hover { color: var(--wine); }
@@ -97,26 +98,44 @@ details[open] > summary::before { content: "−"; }
 .action:hover { background: #722039; }
 .site-footer { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0 22px; color: var(--muted); font-size: 12px; }
 .site-footer a { display: inline-flex; min-height: 35px; align-items: center; }
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   .page { width: calc(100% - 56px); }
-  main.page { grid-template-columns: 280px minmax(0, 1fr); column-gap: 36px; }
+  main.page {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .intro,
+  .formats,
+  .about {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .formats { width: 100%; }
   .intro-copy { padding: 23px 22px 56px; }
   h1 { font-size: 22px; }
-  .stage-photo { width: 230px; margin-left: 25px; }
-  .stage-photo img { width: 230px; }
+  .stage-photo { width: 230px; margin: -35px 0 0 25px; }
+  .stage-photo picture { width: 230px; }
   .format .format-price { flex-direction: column; gap: 2px; align-items: flex-end; }
   h3 { font-size: 20px; }
 }
 @media (max-width: 760px) {
   .page { width: min(620px, calc(100% - 40px)); }
-  .site-header { min-height: 63px; }
+  .site-header {
+    min-height: 63px;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .header-contact { flex-shrink: 0; }
   main.page { display: flex; flex-direction: column; gap: 0; padding-top: 12px; }
-  .intro { width: 100%; position: relative; margin-bottom: 28px; }
-  .intro-copy { padding: 23px 24px; }
-  h1 { font-size: 25px; max-width: 520px; }
-  .offer { font-size: 14px; padding-right: 160px; margin-top: 16px; }
-  .stage-photo { position: absolute; bottom: -12px; right: 15px; margin: 0; width: 140px; }
-  .stage-photo img { width: 140px; }
+  .intro { width: 100%; position: static; margin-bottom: 28px; }
+  .intro-copy { padding: 23px 24px 28px; }
+  h1 { font-size: 25px; max-width: none; }
+  .stage-photo {
+    position: static;
+    width: min(200px, 52vw);
+    margin: 14px 0 0 24px;
+  }
+  .stage-photo img { width: 100%; }
   .stage-photo figcaption { display: none; }
   .formats { width: 100%; }
   .format-header { margin-bottom: 12px; }
@@ -134,12 +153,11 @@ details[open] > summary::before { content: "−"; }
 @media (max-width: 420px) {
   .brand { gap: 4px; font-size: 10px; }
   .brand strong { font-size: 17px; }
+  .brand-meta { font-size: 10px; line-height: 1.35; }
   .header-contact { font-size: 12px; }
   .intro-copy { margin-inline: -20px; padding: 22px 20px 24px; }
   h1 { font-size: 22px; line-height: 1.25; letter-spacing: -.04em; }
-  .offer { padding-right: 125px; font-size: 13px; }
-  .stage-photo { right: -5px; width: 120px; bottom: -10px; }
-  .stage-photo img { width: 120px; }
+  .stage-photo { width: min(180px, 48vw); margin-left: 20px; }
   h2 { font-size: 21px; }
   .format .format-price { gap: 8px; }
   .format-price strong { font-size: 17px; }
@@ -149,7 +167,7 @@ details[open] > summary::before { content: "−"; }
   .site-footer { flex-direction: column; gap: 0; padding-top: 8px; }
 }
 @media (max-width: 350px) {
-  .brand span { font-size: 9px; }
+  .brand-meta { font-size: 9px; }
   .brand strong { font-size: 16px; }
   .header-contact { font-size: 11px; }
   h1 { font-size: 20px; }

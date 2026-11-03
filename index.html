@@ -7,7 +7,7 @@
   <meta name="description" content="Ты уже умеешь фристайлить. Что дальше? Разбор с планом самостоятельной работы и индивидуальные тренировки с Кингсайзом. Онлайн.">
   <title>Кингсайз — разборы и тренировки по фристайлу</title>
   <link rel="preload" href="assets/golos-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=0.7.0">
+  <link rel="stylesheet" href="styles.css?v=0.7.1">
 </head>
 <body id="top">
   <a class="skip" href="#formats">К занятиям</a>
@@ -24,7 +24,15 @@
         <h1 id="hero-title">Ты уже умеешь фристайлить. Что дальше?</h1>
       </div>
       <figure class="stage-photo">
-        <img src="assets/performance.jpg" width="2560" height="1707" title="" alt="Кингсайз выступает с микрофоном" fetchpriority="high">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/performance-180.webp 180w, assets/performance-230.webp 230w, assets/performance-260.webp 260w, assets/performance-360.webp 360w, assets/performance-460.webp 460w, assets/performance-520.webp 520w"
+            sizes="(max-width: 420px) min(180px, 48vw), (max-width: 760px) min(200px, 52vw), (max-width: 1080px) 230px, 260px">
+          <img src="assets/performance-260.jpg"
+            srcset="assets/performance-180.jpg 180w, assets/performance-230.jpg 230w, assets/performance-260.jpg 260w, assets/performance-360.jpg 360w, assets/performance-460.jpg 460w, assets/performance-520.jpg 520w"
+            sizes="(max-width: 420px) min(180px, 48vw), (max-width: 760px) min(200px, 52vw), (max-width: 1080px) 230px, 260px"
+            width="260" height="173" alt="Кингсайз выступает с микрофоном" fetchpriority="high" decoding="async">
+        </picture>
         <figcaption>Во&nbsp;Фристайл-мастерской с 2015 года</figcaption>
       </figure>
     </section>
