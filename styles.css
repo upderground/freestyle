@@ -72,6 +72,7 @@ h2 { font-size: 22px; font-weight: 550; line-height: 1.2; letter-spacing: -.03em
 h3 { font-size: 22px; font-weight: 500; line-height: 1.25; letter-spacing: -.025em; margin: 0 0 12px; max-width: 470px; }
 .format p { font-size: 15px; line-height: 1.5; margin: 0 0 12px; }
 .format .format-note { font-size: 14px; color: var(--muted); }
+.review-result strong { font-weight: 550; }
 .format + .format { margin-top: 18px; padding-top: 22px; border-top: 1px solid var(--line); }
 summary { font-size: 13px; line-height: 1.4; color: var(--wine); cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 9px; list-style: none; }
 summary span { text-decoration: underline; text-underline-offset: 4px; }
